@@ -1,0 +1,21 @@
+name: 'Serverless Deploy'
+description: 'Deploy Serverless stack'
+inputs:
+  serverless_version:
+    description: "Serverless version to use. Defaults to 'latest'."
+    required: false
+    default: 'latest'
+  serverless_stage:
+    description: "Serverless stage to deploy. Defaults to 'dev'."
+    required: false
+    default: 'dev'
+  serverless_command:
+    description: "Serverless command to use. Defaults to 'deploy'."
+    required: false
+    default: 'deploy'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'box'
+  color: 'yellow'
